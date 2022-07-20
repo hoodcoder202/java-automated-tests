@@ -15,13 +15,12 @@ public class DBUtils {
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
 		testDB();
 			
-	}
 	
 	
 	
-	public static void testDB() throws ClassNotFoundException, SQLException {
+	
 		
-		Class.forName("com.mysql.jdbc.Driver");
+		Class.forName("com.mysql.cj.jdbc.Driver");
 		
 		System.out.println("Driver loaded");
 		
@@ -33,7 +32,7 @@ public class DBUtils {
 		//Resultset is required String value passed by way of SQL command
 		
 		//Connection string is created here, using Connection interface to establish the connection to the database
-		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jobsupplies","root","Selenium2021!");
+		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/jobsupplies","root","Peewee1198");
 		
 		System.out.println("Connected to MySQL database");
 		
@@ -76,6 +75,11 @@ public class DBUtils {
 			
 			
 		}
+		
+	}
+
+	private static void testDB() {
+		// TODO Auto-generated method stub
 		
 	}
 	
